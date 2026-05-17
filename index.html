@@ -7,26 +7,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-  
 </head>
 <body>
 
   <!-- ===== HEADER / NAV ===== -->
   <header id="inicio">
     <nav class="navbar">
+
+      <!-- Logo (igual que el original) -->
       <a href="#inicio" class="nav-logo">
         <span class="logo-soluciones">Soluciones</span>
         <span class="logo-grafi">Grafi</span><span class="logo-cas">CAS</span><span class="logo-dot">®</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#precios">Precios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+
+      <!-- Links desktop (visibles solo en pantallas grandes) -->
+      <ul class="nav-links" id="navLinks">
+
+        <!-- LI normales — desktop -->
+        <li class="nav-item-desktop"><a href="#inicio">Inicio</a></li>
+        <li class="nav-item-desktop"><a href="#servicios">Servicios</a></li>
+        <li class="nav-item-desktop"><a href="#galeria">Galería</a></li>
+        <li class="nav-item-desktop"><a href="#precios">Precios</a></li>
+        <li class="nav-item-desktop"><a href="#contacto">Contacto</a></li>
+
+        <!-- Grid de cuadritos — solo visible en móvil cuando está abierto -->
+        <ul class="nav-grid">
+          <li><a href="#inicio"    ><i class="fas fa-home"></i>Inicio</a></li>
+          <li><a href="#servicios" ><i class="fas fa-th-large"></i>Servicios</a></li>
+          <li><a href="#galeria"   ><i class="fas fa-images"></i>Galería</a></li>
+          <li><a href="#precios"   ><i class="fas fa-tag"></i>Precios</a></li>
+          <li><a href="#contacto"  ><i class="fas fa-envelope"></i>Contacto</a></li>
+          <li><a href="tel:+593984034119"><i class="fas fa-phone"></i>Llamar</a></li>
+        </ul>
+
+        <!-- Botón Cotizar al pie del menú desplegable — solo móvil -->
+        <a href="#contacto" class="nav-cta-mobile">
+          <i class="fas fa-paper-plane"></i> Cotizar Ahora
+        </a>
+
       </ul>
+
+      <!-- Overlay que cierra el menú al tocar fuera -->
+      <div class="nav-overlay" id="navOverlay"></div>
+
+      <!-- Botón CTA desktop -->
       <a href="#contacto" class="nav-cta">Cotizar Ahora</a>
-      
+
+      <!-- Hamburguesa -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </nav>
   </header>
 
@@ -79,79 +112,66 @@
         <p>Soluciones integrales para tu negocio, emprendimiento o evento personal.</p>
       </div>
       <div class="servicios-grid">
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-tshirt"></i></div>
           <h3>Impresión DTF Textil</h3>
           <p>Alta definición sobre telas, camisetas, gorras y más. Colores vibrantes que duran.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-layer-group"></i></div>
           <h3>Adhesivo Vinil</h3>
           <p>Corte e impresión de viniles para decoración, vehículos, vitrinas y fachadas.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-fire"></i></div>
           <h3>Estampados y Sublimación</h3>
           <p>Personalización de tazas, platos, almohadas y artículos con tu diseño.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-cubes"></i></div>
           <h3>Rótulos 3D</h3>
           <p>Letras y rótulos volumétricos para darle presencia y distinción a tu local.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-lightbulb"></i></div>
           <h3>Rótulos Luminosos</h3>
           <p>Ilumina tu negocio con paneles y rótulos LED de alto impacto visual.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-id-card"></i></div>
           <h3>Tarjetas de Presentación</h3>
           <p>Diseño e impresión de tarjetas elegantes que dejan huella en tus clientes.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-bullhorn"></i></div>
           <h3>Flyers y Papelería</h3>
           <p>Material corporativo: flyers, brochures, hojas membretadas y más.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-key"></i></div>
           <h3>Llaveros Metálicos</h3>
           <p>Llaveros personalizados como recuerdos, souvenirs o artículos promocionales.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-tag"></i></div>
           <h3>Etiquetas Adhesivas</h3>
           <p>Etiquetas para productos, empaques y presentación de tu marca.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-umbrella-beach"></i></div>
           <h3>Carpas y Viseras</h3>
           <p>Publicidad exterior con carpas personalizadas para eventos y exposiciones.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-heart"></i></div>
           <h3>Invitaciones y Recuerdos</h3>
           <p>Diseños únicos para bodas, quinceañeras, bautizos y eventos especiales.</p>
         </div>
-
         <div class="servicio-card">
           <div class="serv-icon"><i class="fas fa-sign"></i></div>
           <h3>Señaléticas</h3>
           <p>Señalización para empresas, oficinas, instituciones y espacios públicos.</p>
         </div>
-
       </div>
     </div>
   </section>
@@ -183,7 +203,6 @@
         <p>Una muestra de lo que creamos cada día para nuestros clientes.</p>
       </div>
 
-      <!-- Filtros -->
       <div class="galeria-filtros">
         <button class="filtro-btn active" data-filter="all">Todos</button>
         <button class="filtro-btn" data-filter="textil">Textil DTF</button>
@@ -193,7 +212,6 @@
       </div>
 
       <div class="galeria-grid" id="galeriaGrid">
-        <!-- Fila 1 -->
         <div class="gal-item featured" data-cat="textil">
           <img src="img/ImpresDTF.jpg" alt="Impresión DTF textil personalizada" loading="lazy" />
           <div class="gal-overlay"><span>Impresión DTF</span></div>
@@ -210,8 +228,6 @@
           <img src="img/TarjetasPresentacion.jpg" alt="Tarjetas de presentación diseño elegante" loading="lazy" />
           <div class="gal-overlay"><span>Tarjetas</span></div>
         </div>
-
-        <!-- Fila 2 -->
         <div class="gal-item" data-cat="textil">
           <img src="img/SublimacionCamisetas.jpg" alt="Sublimación en camisetas" loading="lazy" />
           <div class="gal-overlay"><span>Sublimación</span></div>
@@ -228,8 +244,6 @@
           <img src="img/Flayers.jpg" alt="Flyers corporativos" loading="lazy" />
           <div class="gal-overlay"><span>Flyers</span></div>
         </div>
-
-        <!-- Fila 3 -->
         <div class="gal-item" data-cat="textil">
           <img src="img/EstampadoGorras.jpg" alt="Estampado personalizado gorras" loading="lazy" />
           <div class="gal-overlay"><span>Estampados</span></div>
@@ -246,8 +260,6 @@
           <img src="img/CarpasViceras.jpg" alt="Carpa personalizada para evento" loading="lazy" />
           <div class="gal-overlay"><span>Carpas</span></div>
         </div>
-
-        <!-- Fila 4 -->
         <div class="gal-item" data-cat="textil">
           <img src="img/VinilDecorativo.jpg" alt="Viniles decorativos" loading="lazy" />
           <div class="gal-overlay"><span>Vinil Decorativo</span></div>
@@ -264,8 +276,6 @@
           <img src="img/PapeleriaArts.jpg" alt="Papelería corporativa completa" loading="lazy" />
           <div class="gal-overlay"><span>Papelería Corp.</span></div>
         </div>
-
-        <!-- Fila 5 -->
         <div class="gal-item" data-cat="textil">
           <img src="img/ImpresionCamisetaDTF.jpg" alt="Impresión de camiseta DTF" loading="lazy" />
           <div class="gal-overlay"><span>Camisetas DTF</span></div>
@@ -299,7 +309,7 @@
         <h2>Mira cómo <span class="accent-light">trabajamos</span></h2>
       </div>
       <div class="video-wrap">
-        <video controls poster="img/Img1.jpg">
+        <video controls poster="img/Img1.jpg" playsinline>
           <source src="video/VideoSGBellavista.mp4" type="video/mp4" />
           Tu navegador no soporta la reproducción de video.
         </video>
@@ -326,54 +336,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Impresión DTF</td>
-              <td>Diseño full color sobre tela, mínimo 6 unidades</td>
-              <td>$3.50 c/u</td>
-              <td>24–48 horas</td>
-            </tr>
-            <tr>
-              <td>Adhesivo Vinil</td>
-              <td>Corte e impresión, por metro cuadrado</td>
-              <td>$12.00 m²</td>
-              <td>1–2 días</td>
-            </tr>
-            <tr>
-              <td>Tarjetas de Presentación</td>
-              <td>100 unidades, full color doble cara</td>
-              <td>$15.00</td>
-              <td>24 horas</td>
-            </tr>
-            <tr>
-              <td>Rótulo 3D</td>
-              <td>Letras volumétricas, según tamaño y material</td>
-              <td>$45.00</td>
-              <td>3–5 días</td>
-            </tr>
-            <tr>
-              <td>Flyers A5</td>
-              <td>500 unidades, papel couché 150g</td>
-              <td>$25.00</td>
-              <td>24 horas</td>
-            </tr>
-            <tr>
-              <td>Sublimación (Taza)</td>
-              <td>Taza 11oz con diseño personalizado</td>
-              <td>$5.00 c/u</td>
-              <td>24 horas</td>
-            </tr>
-            <tr>
-              <td>Llaveros Metálicos</td>
-              <td>Personalizados, mínimo 10 unidades</td>
-              <td>$2.50 c/u</td>
-              <td>48 horas</td>
-            </tr>
-            <tr>
-              <td>Señalética</td>
-              <td>Señal informativa estándar, con instalación</td>
-              <td>$18.00</td>
-              <td>2–3 días</td>
-            </tr>
+            <tr><td>Impresión DTF</td><td>Diseño full color sobre tela, mínimo 6 unidades</td><td>$3.50 c/u</td><td>24–48 horas</td></tr>
+            <tr><td>Adhesivo Vinil</td><td>Corte e impresión, por metro cuadrado</td><td>$12.00 m²</td><td>1–2 días</td></tr>
+            <tr><td>Tarjetas de Presentación</td><td>100 unidades, full color doble cara</td><td>$15.00</td><td>24 horas</td></tr>
+            <tr><td>Rótulo 3D</td><td>Letras volumétricas, según tamaño y material</td><td>$45.00</td><td>3–5 días</td></tr>
+            <tr><td>Flyers A5</td><td>500 unidades, papel couché 150g</td><td>$25.00</td><td>24 horas</td></tr>
+            <tr><td>Sublimación (Taza)</td><td>Taza 11oz con diseño personalizado</td><td>$5.00 c/u</td><td>24 horas</td></tr>
+            <tr><td>Llaveros Metálicos</td><td>Personalizados, mínimo 10 unidades</td><td>$2.50 c/u</td><td>48 horas</td></tr>
+            <tr><td>Señalética</td><td>Señal informativa estándar, con instalación</td><td>$18.00</td><td>2–3 días</td></tr>
           </tbody>
         </table>
       </div>
@@ -415,11 +385,7 @@
         <iframe
           title="Ubicación Soluciones Gráficas Bellavista"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.799!2d-78.6166234!3d-0.8816244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwNTInNTMuOCJTIDc4wrAzNic1Mi4wIlc!5e0!3m2!1ses!2sec!4v1620000000000"
-          width="100%"
-          height="400"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
@@ -438,8 +404,8 @@
         <div class="contacto-info">
           <h3>Información de Contacto</h3>
           <ul>
-            <li><i class="fas fa-phone"></i> 0984 034 119</li>
-            <li><i class="fas fa-phone"></i> 0984 130 434</li>
+            <li><i class="fas fa-phone"></i> <a href="tel:+593984034119">0984 034 119</a></li>
+            <li><i class="fas fa-phone"></i> <a href="tel:+593984130434">0984 130 434</a></li>
             <li><i class="fas fa-map-marker-alt"></i> Bellavista, Ref. Tecnicentro Bellavista</li>
             <li>
               <a href="https://www.facebook.com/solucionesgraficasbellavista" target="_blank">
@@ -454,7 +420,8 @@
           </ul>
         </div>
 
-        <form class="contacto-form" action="#" method="POST">
+        <!-- FORMULARIO -->
+        <form class="contacto-form" id="cotizacionForm" novalidate>
           <div class="form-row">
             <div class="form-group">
               <label for="nombre">Nombre completo *</label>
@@ -491,10 +458,15 @@
           </div>
           <div class="form-group full">
             <label for="mensaje">Mensaje / Detalles del pedido *</label>
-            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Descríbenos lo que necesitas: cantidad, tamaños, colores, fecha de entrega..." required></textarea>
+            <textarea id="mensaje" name="mensaje" rows="5"
+              placeholder="Descríbenos lo que necesitas: cantidad, tamaños, colores, fecha de entrega..."
+              required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-submit">
-            <i class="fas fa-paper-plane"></i> Enviar Cotización
+
+          <div id="formAlerta" class="form-alerta" style="display:none;" role="alert" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-primary btn-submit" id="btnEnviar">
+            <i class="fas fa-paper-plane"></i> <span id="btnTexto">Enviar Cotización</span>
           </button>
         </form>
       </div>
@@ -505,7 +477,6 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-    
         <p>Tu aliado en impresión y rotulación. Bellavista, Ecuador.</p>
       </div>
       <div class="footer-links">
@@ -530,45 +501,147 @@
     </div>
   </footer>
 
-  <script>
-    
+  <!-- ===== SCRIPTS ===== -->
+ <script>
+  // ── Menú hamburguesa (CORREGIDO) ─────────────────────────
+  const navToggle  = document.getElementById('navToggle');
+  const navLinks   = document.getElementById('navLinks');
+  const navOverlay = document.getElementById('navOverlay');
 
-    // Galería filtros
-    const filtros = document.querySelectorAll('.filtro-btn');
-    const items = document.querySelectorAll('.gal-item');
-    filtros.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filtros.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        items.forEach(item => {
-          if (filter === 'all' || item.dataset.cat === filter) {
-            item.style.display = 'block';
-            item.style.animation = 'fadeInUp 0.4s ease';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      });
-    });
+  function openMenu() {
+    navLinks.classList.add('open');
+    navOverlay.classList.add('open');
+    navToggle.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 
-    // Navbar scroll
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('.navbar');
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    navOverlay.classList.remove('open');
+    navToggle.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-          navLinks.classList.remove('open');
+  // 🔥 TOGGLE REAL (abre y cierra)
+  navToggle.addEventListener('click', () => {
+    if (navLinks.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // cerrar tocando fondo oscuro
+  navOverlay.addEventListener('click', closeMenu);
+
+  // cerrar al hacer clic en links
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMenu);
+  });
+
+
+  // ── Galería filtros ──────────────────────────────────────
+  const filtros = document.querySelectorAll('.filtro-btn');
+  const items   = document.querySelectorAll('.gal-item');
+
+  filtros.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filtros.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      items.forEach(item => {
+        if (filter === 'all' || item.dataset.cat === filter) {
+          item.style.display = 'block';
+          item.style.animation = 'fadeInUp 0.4s ease';
+        } else {
+          item.style.display = 'none';
         }
       });
     });
-  </script>
+  });
+
+
+  // ── Navbar scroll ────────────────────────────────────────
+  window.addEventListener('scroll', () => {
+    document.querySelector('.navbar')
+      .classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+
+  // ── Smooth scroll ────────────────────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+
+  // ── Formulario ───────────────────────────────────────────
+  const form      = document.getElementById('cotizacionForm');
+  const alerta    = document.getElementById('formAlerta');
+  const btnEnviar = document.getElementById('btnEnviar');
+  const btnTexto  = document.getElementById('btnTexto');
+
+  function mostrarAlerta(tipo, mensaje) {
+    alerta.className = 'form-alerta ' + tipo;
+    alerta.innerHTML = (tipo === 'exito')
+      ? '<i class="fas fa-check-circle"></i> ' + mensaje
+      : '<i class="fas fa-exclamation-circle"></i> ' + mensaje;
+
+    alerta.style.display = 'flex';
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    alerta.style.display = 'none';
+
+    const nombre  = form.nombre.value.trim();
+    const email   = form.email.value.trim();
+    const mensaje = form.mensaje.value.trim();
+
+    if (!nombre || !email || !mensaje) {
+      mostrarAlerta('error', 'Completa los campos obligatorios.');
+      return;
+    }
+
+    btnEnviar.disabled = true;
+    btnTexto.textContent = 'Enviando…';
+
+    try {
+      const res = await fetch('guardar.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre,
+          email,
+          telefono: form.telefono.value,
+          servicio: form.servicio.value,
+          mensaje
+        })
+      });
+
+      const json = await res.json();
+
+      if (json.ok) {
+        mostrarAlerta('exito', json.mensaje);
+        form.reset();
+      } else {
+        mostrarAlerta('error', json.mensaje);
+      }
+
+    } catch (err) {
+      mostrarAlerta('error', 'Error de conexión');
+    }
+
+    btnEnviar.disabled = false;
+    btnTexto.textContent = 'Enviar Cotización';
+  });
+</script>
 </body>
 </html>
